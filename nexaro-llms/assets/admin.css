@@ -1,0 +1,38 @@
+:root{--nx-bg:#ffffff;--nx-surface:#f7f7f7;--nx-border:#dcdcdc;--nx-text:#1d2327;--nx-muted:#50575e;--nx-primary:#007cba;--nx-danger:#ca4a1f;--nx-success:#008a20;--nx-warning:#a88c00;--nx-focus:#72aee6}
+@media (prefers-color-scheme:dark){:root{--nx-bg:#111;--nx-surface:#1a1a1a;--nx-border:#333;--nx-text:#f1f1f1;--nx-muted:#c1c1c1;--nx-primary:#61b3ff;--nx-danger:#ff7b61;--nx-success:#40d47e;--nx-warning:#ffd166;--nx-focus:#4aa3ff}}
+
+.nx-card{background:var(--nx-surface);border:1px solid var(--nx-border);border-radius:8px;padding:16px;margin:12px 0}
+.nx-card h2,.nx-card h3{margin-top:0;color:var(--nx-text)}
+.nx-muted{color:var(--nx-muted)}
+.nx-row{display:flex;flex-wrap:wrap;gap:16px}
+.nx-col{flex:1 1 320px}
+
+#nexaro-llms-meta textarea{width:100%;min-height:220px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;line-height:1.5;resize:vertical}
+#nexaro-llms-meta .nx-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#nexaro-llms-meta .nx-validate{border-inline-start:4px solid var(--nx-border);padding-inline-start:12px;margin-top:12px}
+#nexaro-llms-meta .nx-validate.good{border-inline-start-color:var(--nx-success)}
+#nexaro-llms-meta .nx-validate.warn{border-inline-start-color:var(--nx-warning)}
+#nexaro-llms-meta .nx-validate.bad{border-inline-start-color:var(--nx-danger)}
+
+.nx-table{width:100%;border-collapse:collapse}
+.nx-table th,.nx-table td{border:1px solid var(--nx-border);padding:8px;vertical-align:top}
+.nx-table th{background:var(--nx-surface);text-align:start}
+
+.nx-badge{display:inline-block;padding:2px 8px;border:1px solid var(--nx-border);border-radius:999px;background:var(--nx-bg);font-size:12px}
+.nx-badge.ok{border-color:var(--nx-success);color:var(--nx-success)}
+.nx-badge.warn{border-color:var(--nx-warning);color:var(--nx-warning)}
+.nx-badge.bad{border-color:var(--nx-danger);color:var(--nx-danger)}
+
+/* Focus */
+button:focus, input:focus, textarea:focus, a:focus{outline:2px solid var(--nx-focus);outline-offset:2px}
+
+/* RTL-first */
+html[dir="rtl"] .nx-table th, html[dir="rtl"] .nx-table td{text-align:start}
+
+/* Micro-interactions */
+button.nx-ghost{background:transparent;border:1px solid var(--nx-border);color:var(--nx-text)}
+button.nx-ghost:hover{border-color:var(--nx-primary);color:var(--nx-primary)}
+
+/* Admin pages */
+#nx-admin .nx-card .description{margin-top:6px;color:var(--nx-muted)}
+#nx-admin .code{font-family:ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", monospace;background:var(--nx-bg);border:1px dashed var(--nx-border);padding:4px 6px;border-radius:4px}
